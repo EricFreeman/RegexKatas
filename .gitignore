@@ -1,0 +1,10 @@
+packages
+/
+obj
+/
+bin
+/
+*.suo
+
+*.csproj.user
+*.DotSettings.user
