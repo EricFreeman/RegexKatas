@@ -10,7 +10,7 @@ namespace RegexKatas
         public const string TestVar3 = "Mozilla/NoVersion (compatible; MSIE 6.5; Windows NT 5.5)";
 
         /// <summary>
-        /// 1) Find mozilla version number without explicitly matching on it (eg don't check for the text '4.75').
+        /// Find mozilla version number without explicitly matching on it (eg don't check for the text '4.75').
         /// </summary>
         [Fact]
         public static void Test1()
@@ -18,17 +18,17 @@ namespace RegexKatas
             const string regex = @"(put answer here)";
             const int captureGroup = 0; // use to configure which capture group your answer is in
 
-            var m = Regex.Match(TestVar1, regex); 
+            var m1 = Regex.Match(TestVar1, regex); 
             var m2 = Regex.Match(TestVar2, regex);
             var m3 = Regex.Match(TestVar3, regex);
 
-            Assert.True(m.Success && m.Groups[captureGroup].Value.Equals("4.0"));
+            Assert.True(m1.Success && m1.Groups[captureGroup].Value.Equals("4.0"));
             Assert.True(m2.Success && m2.Groups[captureGroup].Value.Equals("4.75"));
             Assert.False(m3.Success);
         }
 
         /// <summary>
-        /// 1) Find Windows NT version number without explicitly matching on it (eg don't check for the text '6.0').
+        /// Find Windows NT version number without explicitly matching on it (eg don't check for the text '6.0').
         /// </summary>
         [Fact]
         public static void Test2()
@@ -36,11 +36,11 @@ namespace RegexKatas
             const string regex = @"(put answer here)";
             const int captureGroup = 0;
 
-            var m = Regex.Match(TestVar1, regex);
+            var m1 = Regex.Match(TestVar1, regex);
             var m2 = Regex.Match(TestVar2, regex);
             var m3 = Regex.Match(TestVar3, regex);
 
-            Assert.True(m.Success && m.Groups[captureGroup].Value.Equals("6.0"));
+            Assert.True(m1.Success && m1.Groups[captureGroup].Value.Equals("6.0"));
             Assert.True(m2.Success && m2.Groups[captureGroup].Value.Equals("5.1"));
             Assert.True(m3.Success && m3.Groups[captureGroup].Value.Equals("5.5"));
         }
