@@ -15,8 +15,8 @@ namespace RegexKatas
         [Fact]
         public static void Test1()
         {
-            const string regex = @"(put answer here)";
-            const int captureGroup = 0; // use to configure which capture group your answer is in
+            const string regex = @"Mozilla\/(\d.\d+)";
+            const int captureGroup = 1; // use to configure which capture group your answer is in
 
             var m = Regex.Match(TestVar1, regex); 
             var m2 = Regex.Match(TestVar2, regex);
@@ -33,8 +33,8 @@ namespace RegexKatas
         [Fact]
         public static void Test2()
         {
-            const string regex = @"(put answer here)";
-            const int captureGroup = 0;
+            const string regex = @"Windows NT (\d.\d+)";
+            const int captureGroup = 1;
 
             var m = Regex.Match(TestVar1, regex);
             var m2 = Regex.Match(TestVar2, regex);

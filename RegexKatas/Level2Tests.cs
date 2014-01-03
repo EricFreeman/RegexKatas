@@ -16,7 +16,7 @@ namespace RegexKatas
         [Fact]
         public static void Test1()
         {
-            const string regex = @"(put answer here)";
+            const string regex = @"1?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}";
             const int captureGroup = 0;
 
             var m = Regex.Match(TestVar, regex);
@@ -37,8 +37,8 @@ namespace RegexKatas
         [Fact]
         public static void Test2()
         {
-            const string regex = @"(put answer here)";
-            const int captureGroup = 0;
+            const string regex = @"([\w\s]+)[\s:-]\s?.*801";
+            const int captureGroup = 1;
 
             var m = Regex.Match(TestVar, regex);
             var m2 = Regex.Match(TestVar2, regex);
